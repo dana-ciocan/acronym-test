@@ -23,9 +23,11 @@
           "
         />
       </form>
-      <p>{{ message }}</p>
-      <div v-if="selectedAcronym === acronyms.length">
-        You have gone through all the terms - congratulations!
+      <p class="message">{{ message }}</p>
+      <div class="complete">
+        <span v-if="selectedAcronym === acronyms.length - 1">
+          You have gone through all the terms - congratulations!
+        </span>
       </div>
       <div class="nav-buttons">
         <div class="prev-button">
@@ -145,5 +147,14 @@ input[type='button'] {
   cursor: pointer;
   font-weight: bold;
   font-size: 120%;
+}
+
+.message,
+.complete {
+  height: 15px;
+}
+
+.complete {
+  margin-bottom: 15px;
 }
 </style>
