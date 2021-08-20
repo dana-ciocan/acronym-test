@@ -18,25 +18,22 @@
         />
       </form>
       <p>{{ message }}</p>
-      <div v-if="acronyms.length > 0">
-        <input
-          v-if="messageClass === 'message'"
-          type="button"
-          value="Next term"
-          @click="
-            (randomAcronym = acronyms.splice(
-              Math.floor(Math.random() * acronyms.length),
-              1,
-            )[0]),
-              (messageClass = ''),
-              (userDefinition = ''),
-              (message = '')
-          "
-        />
-      </div>
       <div v-if="messageClass === 'message' && acronyms.length === 0">
         You have gone through all the terms - congratulations!
       </div>
+      <input
+        type="button"
+        value="Next term >>"
+        @click="
+          (randomAcronym = acronyms.splice(
+            Math.floor(Math.random() * acronyms.length),
+            1,
+          )[0]),
+            (messageClass = ''),
+            (userDefinition = ''),
+            (message = '')
+        "
+      />
     </div>
   </div>
 </template>
