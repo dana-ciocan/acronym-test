@@ -1,6 +1,9 @@
 <template>
   <div class="card-container">
     <div class="card" :class="messageClass">
+      <div class="counter">
+        Progress: {{ selectedAcronym + 1 }}/{{ acronyms.length }}
+      </div>
       <h1>{{ acronyms[selectedAcronym].acronym }}</h1>
       <p>What does this acronym stand for?</p>
       <form @submit.prevent="onSubmit">
@@ -136,8 +139,9 @@ export default {
 }
 
 input[type='button'] {
-  background-color: white;
+  padding: 5px;
   border: none;
+  background-color: transparent;
   cursor: pointer;
   font-weight: bold;
   font-size: 120%;
