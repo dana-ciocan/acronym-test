@@ -1,6 +1,6 @@
 <template>
-  <div class="card-container" ontouchstart="this.classList.toggle('hover');">
-    <div class="card">
+  <div class="card-container">
+    <div class="card" :class="messageClass">
       <h1>{{ randomAcronym.acronym }}</h1>
       <p>What does this acronym stand for?</p>
       <form @submit.prevent="onSubmit">
@@ -17,7 +17,7 @@
           "
         />
       </form>
-      <p :class="messageClass">{{ message }}</p>
+      <p>{{ message }}</p>
       <div v-if="acronyms.length > 0">
         <input
           v-if="messageClass === 'message'"
@@ -75,7 +75,7 @@ export default {
     },
     getMessageClass: (userDefinition, definition) => {
       if (definitionsMatch(userDefinition, definition)) {
-        return 'message';
+        return 'correct';
       }
       return 'error';
     },
@@ -84,12 +84,24 @@ export default {
 </script>
 
 <style scoped>
-div.card {
-  margin-left: auto;
-  margin-right: auto;
+.card {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
   border-radius: 15px;
   padding: 15px;
   background-color: #fff;
-  width: 33%;
+  width: 400px;
+  height: 200px;
+  margin-top: -115px;
+  margin-left: -215px;
+}
+
+.card.error {
+  background-color: lightcoral;
+}
+
+.card.correct {
+  background-color: mediumspringgreen;
 }
 </style>
