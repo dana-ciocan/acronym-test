@@ -65,50 +65,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import acronyms from '../data/acronyms.json';
-
-type Acronym = {
-  acronym: string;
-  expansion: string;
-  definition: string;
-};
-
-const shuffledAcronyms: Acronym[] = acronyms.sort(() => Math.random() - 0.5);
-
-const definitionsMatch = (definition1: string, definition2: string) =>
-  definition1.toLowerCase() === definition2.toLowerCase();
-
-export default {
-  name: 'Card',
-  props: {},
-  data: () => ({
-    userDefinition: '',
-    message: '',
-    acronyms: shuffledAcronyms,
-    selectedAcronym: 0,
-    messageClass: '',
-  }),
-  methods: {
-    checkAcronym: (userDefinition: string, definition: string) => {
-      let message: string = `You said: '${userDefinition}'`;
-      if (definitionsMatch(userDefinition, definition)) {
-        message += ' - you are right!';
-      } else {
-        message += ' - try again';
-      }
-      return message;
-    },
-    getMessageClass: (userDefinition: string, definition: string) => {
-      if (definitionsMatch(userDefinition, definition)) {
-        return 'correct';
-      }
-      return 'error';
-    },
-  },
-};
-</script>
-
 <style scoped>
 .card {
   position: fixed; /* or absolute */
@@ -161,3 +117,47 @@ input[type='button'] {
   margin-bottom: 15px;
 }
 </style>
+
+<script lang="ts">
+import acronyms from '../data/acronyms.json';
+
+type Acronym = {
+  acronym: string;
+  expansion: string;
+  definition: string;
+};
+
+const shuffledAcronyms: Acronym[] = acronyms.sort(() => Math.random() - 0.5);
+
+const definitionsMatch = (definition1: string, definition2: string) =>
+  definition1.toLowerCase() === definition2.toLowerCase();
+
+export default {
+  name: 'Card',
+  props: {},
+  data: () => ({
+    userDefinition: '',
+    message: '',
+    acronyms: shuffledAcronyms,
+    selectedAcronym: 0,
+    messageClass: '',
+  }),
+  methods: {
+    checkAcronym: (userDefinition: string, definition: string) => {
+      let message: string = `You said: '${userDefinition}'`;
+      if (definitionsMatch(userDefinition, definition)) {
+        message += ' - you are right!';
+      } else {
+        message += ' - try again';
+      }
+      return message;
+    },
+    getMessageClass: (userDefinition: string, definition: string) => {
+      if (definitionsMatch(userDefinition, definition)) {
+        return 'correct';
+      }
+      return 'error';
+    },
+  },
+};
+</script>
