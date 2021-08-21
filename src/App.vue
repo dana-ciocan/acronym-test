@@ -2,7 +2,7 @@
   <Card />
 </template>
 
-<script>
+<script lang="ts">
 import Card from './components/Card.vue';
 
 export default {

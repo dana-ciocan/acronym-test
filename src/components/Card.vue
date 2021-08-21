@@ -65,20 +65,23 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import acronyms from '../data/acronyms.json';
 
-const shuffledAcronyms = acronyms.sort(() => Math.random() - 0.5);
+type Acronym = {
+  acronym: string;
+  expansion: string;
+  definition: string;
+};
 
-const definitionsMatch = (definition1, definition2) =>
+const shuffledAcronyms: Acronym[] = acronyms.sort(() => Math.random() - 0.5);
+
+const definitionsMatch = (definition1: string, definition2: string) =>
   definition1.toLowerCase() === definition2.toLowerCase();
 
 export default {
   name: 'Card',
-  props: {
-    acronym: String,
-    definition: String,
-  },
+  props: {},
   data: () => ({
     userDefinition: '',
     message: '',
@@ -87,8 +90,8 @@ export default {
     messageClass: '',
   }),
   methods: {
-    checkAcronym: (userDefinition, definition) => {
-      let message = `You said: '${userDefinition}'`;
+    checkAcronym: (userDefinition: string, definition: string) => {
+      let message: string = `You said: '${userDefinition}'`;
       if (definitionsMatch(userDefinition, definition)) {
         message += ' - you are right!';
       } else {
@@ -96,7 +99,7 @@ export default {
       }
       return message;
     },
-    getMessageClass: (userDefinition, definition) => {
+    getMessageClass: (userDefinition: string, definition: string) => {
       if (definitionsMatch(userDefinition, definition)) {
         return 'correct';
       }
