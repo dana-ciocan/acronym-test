@@ -1,7 +1,7 @@
 import Card from './Card.vue';
 
 export default {
-  title: 'Example/Card',
+  title: 'Card',
   component: Card,
   argTypes: {},
 };

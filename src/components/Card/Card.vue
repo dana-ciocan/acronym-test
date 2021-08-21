@@ -1,9 +1,10 @@
 <template>
   <div class="card-container">
     <div class="card" :class="messageClass">
-      <div class="counter">
-        Progress: {{ selectedAcronym + 1 }}/{{ acronyms.length }}
-      </div>
+      <Progress
+        :currentAcronym="selectedAcronym"
+        :totalAcronyms="acronyms.length"
+      />
       <h1>{{ acronyms[selectedAcronym].acronym }}</h1>
       <p>What does this acronym stand for?</p>
       <form @submit.prevent="onSubmit">
@@ -119,7 +120,8 @@ input[type='button'] {
 </style>
 
 <script lang="ts">
-import acronyms from '../data/acronyms.json';
+import acronyms from '../../data/acronyms.json';
+import Progress from '../Progress/Progress.vue';
 
 type Acronym = {
   acronym: string;
@@ -135,6 +137,9 @@ const definitionsMatch = (definition1: string, definition2: string) =>
 export default {
   name: 'Card',
   props: {},
+  components: {
+    Progress,
+  },
   data: () => ({
     userDefinition: '',
     message: '',
