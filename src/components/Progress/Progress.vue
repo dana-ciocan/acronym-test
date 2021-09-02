@@ -28,6 +28,8 @@ export default {
   border: 1px solid black;
   height: 15px;
   padding: 3px;
+  width: 50%;
+  margin: 15px auto;
 }
 
 .progress {
