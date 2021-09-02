@@ -23,3 +23,6 @@ const Template = (args: Arguments) => ({
 });
 
 export const Primary = Template.bind({ currentAcronym: 0, totalAcronyms: 10 });
+
+// @ts-ignore Property does not exist (2339)
+Primary.storyName = 'Progress';

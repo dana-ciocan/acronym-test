@@ -18,3 +18,6 @@ const Template = () => ({
 });
 
 export const Primary = Template.bind({});
+
+// @ts-ignore Property does not exist (2339)
+Primary.storyName = 'Card';
