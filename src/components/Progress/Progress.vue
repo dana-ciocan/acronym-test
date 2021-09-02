@@ -8,7 +8,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'Progress',
   props: {
     currentAcronym: Number,
@@ -20,7 +22,7 @@ export default {
       return `progress-${Math.round(progressPercent / 10) * 10}`;
     },
   },
-};
+});
 </script>
 
 <style scoped>
