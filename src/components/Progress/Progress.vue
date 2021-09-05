@@ -46,6 +46,9 @@ export default defineComponent({
   height: 1.5rem;
 }
 
+.progress-bar.progress-0 {
+  width: 0%;
+}
 .progress-bar.progress-10 {
   width: 10%;
 }
