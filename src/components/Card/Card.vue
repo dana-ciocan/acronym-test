@@ -5,47 +5,11 @@
       <p>What does this acronym stand for?</p>
       <form @submit.prevent="onSubmit">
         <input type="text" v-model="userDefinition" />
-        <input
-          type="submit"
-          value="Check"
-          @click="message = checkAcronym(userDefinition, expansion)"
-        />
       </form>
       <div v-if="message" class="message">{{ message }}</div>
     </div>
   </div>
 </template>
-
-<style scoped>
-.card {
-  border-radius: 15px;
-  padding: 15px;
-  background-color: #fff;
-  width: 600px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.card.error {
-  background-color: lightcoral;
-}
-
-.card.correct {
-  background-color: mediumspringgreen;
-}
-
-.message,
-.complete {
-  height: 15px;
-}
-
-.complete {
-  margin-bottom: 15px;
-}
-</style>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
@@ -79,3 +43,5 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped></style>
