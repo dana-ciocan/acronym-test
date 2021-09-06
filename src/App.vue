@@ -8,21 +8,6 @@
     <div class="answer-input">
       <input type="text" ref="answer" />
     </div>
-    <div class="expansion-display">
-      <p v-if="correctAnswers[selectedAcronym] === true" class="correct-answer">
-        You got it right!
-      </p>
-      <p
-        v-if="correctAnswers[selectedAcronym] === false"
-        class="incorrect-answer"
-      >
-        You got it wrong :(
-      </p>
-      <p v-if="correctAnswers[selectedAcronym] !== undefined">
-        {{ acronyms[selectedAcronym].acronym }} =
-        {{ acronyms[selectedAcronym].expansion }}
-      </p>
-    </div>
     <div class="navigation-buttons">
       <button
         @click="checkAnswer"
@@ -42,6 +27,24 @@
       >
         Next acronym >>
       </button>
+    </div>
+    <div class="expansion-display">
+      <p v-if="correctAnswers[selectedAcronym] === true" class="correct-answer">
+        You got it right!
+      </p>
+      <p
+        v-if="correctAnswers[selectedAcronym] === false"
+        class="incorrect-answer"
+      >
+        You got it wrong :(
+      </p>
+      <p v-if="correctAnswers[selectedAcronym] !== undefined">
+        {{ acronyms[selectedAcronym].acronym }} =
+        {{ acronyms[selectedAcronym].expansion }}
+      </p>
+      <p v-if="correctAnswers[selectedAcronym] !== undefined">
+        {{ acronyms[selectedAcronym].definition }}
+      </p>
     </div>
   </div>
   <div class="result-container" v-if="selectedAcronym === acronyms.length">
