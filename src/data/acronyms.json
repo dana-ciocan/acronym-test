@@ -78,5 +78,10 @@
     "acronym": "VPC",
     "expansion": "Virtual Private Cloud",
     "definition": "A web service for provisioning a logically isolated section of the AWS Cloud virtual network that you define. You control your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways"
+  },
+  {
+    "acronym": "ASG",
+    "expansion": "Auto Scaling Group",
+    "definition": "A representation of multiple EC2 instances that share similar characteristics, and that are treated as a logical grouping for the purposes of instance scaling and management"
   }
 ]
