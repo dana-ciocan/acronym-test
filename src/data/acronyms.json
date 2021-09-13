@@ -83,5 +83,15 @@
     "acronym": "ASG",
     "expansion": "Auto Scaling Group",
     "definition": "A representation of multiple EC2 instances that share similar characteristics, and that are treated as a logical grouping for the purposes of instance scaling and management"
+  },
+  {
+    "acronym": "CDN",
+    "expansion": "Content Delivery Network",
+    "definition": "A web service that speeds up distribution of your static and dynamic web content—such as .html, .css, .js, media files, and image files—to your users by using a worldwide network of data centers. When a user requests your content, the request is routed to the data center that provides the lowest latency (time delay). If the content is already in the location with the lowest latency, the CDN delivers it immediately. If not, the CDN retrieves it from an origin that you specify (for example, a web server or an Amazon S3 bucket). With some CDNs, you can help secure your content by configuring an HTTPS connection between users and data centers, and between data centers and your origin. Amazon CloudFront is an example of a CDN."
+  },
+  {
+    "acronym": "CLI",
+    "expansion": "Command Line Interface",
+    "definition": "A unified downloadable and configurable tool for managing AWS services. Control multiple AWS services from the command line and automate them through scripts"
   }
 ]
