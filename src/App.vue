@@ -6,7 +6,11 @@
     </h2>
     <p>What does this acronym stand for?</p>
     <div class="answer-input">
-      <input type="text" ref="answer" />
+      <input
+        type="text"
+        ref="answer"
+        :disabled="correctAnswers[selectedAcronym] !== undefined"
+      />
     </div>
     <div class="navigation-buttons">
       <button
