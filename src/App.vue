@@ -22,14 +22,19 @@
         Next acronym >>
       </button>
     </div>
-    <div class="expansion-display">
-      <p v-if="correctAnswers[selectedAcronym] === true" class="correct-answer">
+    <div
+      class="expansion-display"
+      v-if="correctAnswers[selectedAcronym] !== undefined"
+      :class="
+        correctAnswers[selectedAcronym] === true
+          ? 'correct-answer'
+          : 'incorrect-answer'
+      "
+    >
+      <p v-if="correctAnswers[selectedAcronym] === true">
         You got it right!
       </p>
-      <p
-        v-if="correctAnswers[selectedAcronym] === false"
-        class="incorrect-answer"
-      >
+      <p v-if="correctAnswers[selectedAcronym] === false">
         You got it wrong :(
       </p>
       <p v-if="correctAnswers[selectedAcronym] !== undefined">
@@ -126,12 +131,24 @@ p {
 }
 
 .expansion-display {
-  height: 1rem;
-  padding: 2rem 0;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.expansion-display.correct-answer {
+  background-color: palegreen;
+  border-radius: 0.25rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem darkgreen;
+}
+
+.expansion-display.incorrect-answer {
+  background-color: lightpink;
+  border-radius: 0.25rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem darkred;
 }
 
 .expansion-display > p {
-  margin: 0;
+  margin-top: 0;
 }
 
 .navigation-buttons {
@@ -151,6 +168,7 @@ p {
   border-radius: 0.5rem;
   margin-right: 1rem;
   cursor: pointer;
+  width: 15rem;
 }
 
 input[type='text'] {
