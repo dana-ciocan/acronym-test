@@ -13,13 +13,7 @@
         @click="checkAnswer"
         v-if="correctAnswers[selectedAcronym] === undefined"
       >
-        Check
-      </button>
-      <button
-        @click="skipAcronym"
-        v-if="correctAnswers[selectedAcronym] === undefined"
-      >
-        Skip
+        Check answer
       </button>
       <button
         @click="incrementAcronymNumber"
@@ -89,10 +83,6 @@ export default defineComponent({
       this.selectedAcronym++;
       this.calculatePercentage();
       answerElement.value = '';
-    },
-    skipAcronym() {
-      this.correctAnswers[this.selectedAcronym] = false;
-      this.incrementAcronymNumber();
     },
     checkAnswer() {
       const answerElement: any = this.$refs.answer;
