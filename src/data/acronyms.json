@@ -92,6 +92,36 @@
   {
     "acronym": "CLI",
     "expansion": "Command Line Interface",
-    "definition": "A unified downloadable and configurable tool for managing AWS services. Control multiple AWS services from the command line and automate them through scripts"
+    "definition": "A unified downloadable and configurable tool for managing AWS services. Control multiple AWS services from the command line and automate them through scripts."
+  },
+  {
+    "acronym": "EMR",
+    "expansion": "Elastic MapReduce",
+    "definition": ""
+  },
+  {
+    "acronym": "BI",
+    "expansion": "Business Intelligence",
+    "definition": "The strategies and technologies used by enterprises for the data analysis of business information"
+  },
+  {
+    "acronym": "QLDB",
+    "expansion": "Quantum Ledger Database",
+    "definition": "A fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log ‎owned by a central trusted authority"
+  },
+  {
+    "acronym": "DMS",
+    "expansion": "Database Migration Service",
+    "definition": "A web service that can help you migrate data to and from many widely used commercial and open-source databases"
+  },
+  {
+    "acronym": "ETL",
+    "expansion": "Extract, transform and load",
+    "definition": "A process that's used to integrate data from multiple sources. Data is collected from sources (extract), converted to an appropriate format (transform), and written to a target data store (load) for purposes of analysis and querying. AWS Glue is an ETL service"
+  },
+  {
+    "acronym": "DAX",
+    "expansion": "DynamoDB Accelerator",
+    "definition": "a fully managed, highly available, in-memory cache for Amazon DynamoDB that delivers up to a 10 times performance improvement"
   }
 ]
