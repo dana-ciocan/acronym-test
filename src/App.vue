@@ -10,6 +10,7 @@
         type="text"
         ref="answer"
         :disabled="correctAnswers[selectedAcronym] !== undefined"
+        @keyup.enter="checkAnswer"
       />
     </div>
     <div class="navigation-buttons">
