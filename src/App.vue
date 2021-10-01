@@ -92,7 +92,9 @@ export default defineComponent({
       const answerElement: any = this.$refs.answer;
       this.selectedAcronym++;
       this.calculatePercentage();
+      answerElement.disabled = false;
       answerElement.value = '';
+      answerElement.focus();
     },
     checkAnswer() {
       const answerElement: any = this.$refs.answer;
