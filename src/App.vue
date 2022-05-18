@@ -91,7 +91,6 @@ export default defineComponent({
     incrementAcronymNumber() {
       const answerElement: any = this.$refs.answer;
       this.selectedAcronym++;
-      this.calculatePercentage();
       answerElement.disabled = false;
       answerElement.value = '';
       answerElement.focus();
@@ -101,11 +100,6 @@ export default defineComponent({
       this.correctAnswers[this.selectedAcronym] =
         answerElement.value.toLowerCase() ===
         acronyms[this.selectedAcronym].expansion.toLowerCase();
-    },
-    calculatePercentage() {
-      this.percentageComplete = Math.round(
-        ((this.selectedAcronym - 1) / acronyms.length) * 100,
-      );
     },
   },
 });
