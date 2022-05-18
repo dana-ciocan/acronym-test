@@ -64,12 +64,7 @@
 <script lang="ts">
 import acronyms from './data/acronyms.json';
 import { defineComponent } from 'vue';
-
-type Acronym = {
-  acronym: string;
-  expansion: string;
-  definition: string;
-};
+import { Acronym } from './types/acronym';
 
 const shuffledAcronyms: Acronym[] = acronyms
   .sort(() => Math.random() - 0.5)
