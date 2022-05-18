@@ -1,11 +1,11 @@
 <template>
-  <div class="test-container" v-if="selectedAcronym < acronyms.length">
+  <div class="testContainer" v-if="selectedAcronym < acronyms.length">
     <h2>
       Acronym {{ selectedAcronym + 1 }}/{{ acronyms.length }}:
       {{ acronyms[selectedAcronym].acronym }}
     </h2>
     <p>What does this acronym stand for?</p>
-    <div class="answer-input">
+    <div class="answerInput">
       <input
         type="text"
         ref="answer"
@@ -13,7 +13,7 @@
         @keyup.enter="checkAnswer"
       />
     </div>
-    <div class="navigation-buttons">
+    <div class="navigationButtons">
       <button
         @click="checkAnswer"
         v-if="correctAnswers[selectedAcronym] === undefined"
@@ -28,12 +28,12 @@
       </button>
     </div>
     <div
-      class="expansion-display"
+      class="expansionDisplay"
       v-if="correctAnswers[selectedAcronym] !== undefined"
       :class="
         correctAnswers[selectedAcronym] === true
-          ? 'correct-answer'
-          : 'incorrect-answer'
+          ? 'correctAnswer'
+          : 'incorrectAnswer'
       "
     >
       <p v-if="correctAnswers[selectedAcronym] === true">
@@ -51,7 +51,7 @@
       </p>
     </div>
   </div>
-  <div class="result-container" v-if="selectedAcronym === acronyms.length">
+  <div class="resultContainer" v-if="selectedAcronym === acronyms.length">
     <p>The test is complete!</p>
     <p>
       You scored
@@ -114,7 +114,7 @@ body {
   width: 100%;
 }
 
-.test-container {
+.testContainer {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
@@ -131,32 +131,32 @@ p {
   font-size: 2rem;
 }
 
-.expansion-display {
+.expansionDisplay {
   padding: 1rem;
   margin-top: 1rem;
 }
 
-.expansion-display.correct-answer {
+.expansionDisplay.correctAnswer {
   background-color: palegreen;
   border-radius: 0.25rem;
   box-shadow: 0.25rem 0.25rem 0.25rem darkgreen;
 }
 
-.expansion-display.incorrect-answer {
+.expansionDisplay.incorrectAnswer {
   background-color: lightpink;
   border-radius: 0.25rem;
   box-shadow: 0.25rem 0.25rem 0.25rem darkred;
 }
 
-.expansion-display > p {
+.expansionDisplay > p {
   margin-top: 0;
 }
 
-.navigation-buttons {
+.navigationButtons {
   margin-top: 2em;
 }
 
-.navigation-buttons button {
+.navigationButtons button {
   background-color: purple; /* Green */
   border: none;
   color: white;
@@ -203,7 +203,7 @@ input[type='text'] {
     font-size: 1.25rem;
   }
 
-  .navigation-buttons button {
+  .navigationButtons button {
     font-size: 1rem;
   }
 
