@@ -62,6 +62,7 @@
 </template>
 
 <script lang="ts">
+console.log('is this running?');
 import acronyms from './data/acronyms.json';
 import { defineComponent } from 'vue';
 import { Acronym } from './types/acronym';
