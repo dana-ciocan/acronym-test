@@ -2,6 +2,7 @@
 import SpecialButton from './components/SpecialButton/SpecialButton.vue';
 import AppHeader from './components/AppHeader/AppHeader.vue';
 import VictoryScreen from './components/VictoryScreen/VictoryScreen.vue';
+import ExpansionDisplay from './components/ExpansionDisplay/ExpansionDisplay.vue';
 </script>
 
 <template>
@@ -28,27 +29,18 @@ import VictoryScreen from './components/VictoryScreen/VictoryScreen.vue';
         }}
       </SpecialButton>
     </div>
-    <div
-      class="expansionDisplay"
+    <ExpansionDisplay
       v-if="correctAnswers[selectedAcronym] !== undefined"
-      :class="
-        correctAnswers[selectedAcronym] === true
-          ? 'correctAnswer'
-          : 'incorrectAnswer'
-      "
+      :isAnswerCorrect="correctAnswers[selectedAcronym] === true"
+      :definition="acronyms[selectedAcronym].definition"
+      :expansion="acronyms[selectedAcronym].expansions[0]"
     >
-      <p v-if="correctAnswers[selectedAcronym] === true">You got it right 🎉</p>
-      <p v-if="correctAnswers[selectedAcronym] === false">
-        You got it wrong 😭
-      </p>
-      <p v-if="correctAnswers[selectedAcronym] !== undefined">
-        {{ acronyms[selectedAcronym].acronym }} =
-        {{ acronyms[selectedAcronym].expansions[0] }}
-      </p>
-      <p v-if="correctAnswers[selectedAcronym] !== undefined">
-        {{ acronyms[selectedAcronym].definition }}
-      </p>
-    </div>
+      {{
+        correctAnswers[selectedAcronym] === true
+          ? 'You got it right 🎉'
+          : 'You got it wrong 😭'
+      }}
+    </ExpansionDisplay>
   </div>
   <VictoryScreen
     v-if="selectedAcronym === acronyms.length"
@@ -126,27 +118,6 @@ body {
 p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
-}
-
-.expansionDisplay {
-  padding: 1rem;
-  margin-top: 1rem;
-}
-
-.expansionDisplay.correctAnswer {
-  background-color: palegreen;
-  border-radius: 0.25rem;
-  box-shadow: 0.25rem 0.25rem 0.25rem darkgreen;
-}
-
-.expansionDisplay.incorrectAnswer {
-  background-color: lightpink;
-  border-radius: 0.25rem;
-  box-shadow: 0.25rem 0.25rem 0.25rem darkred;
-}
-
-.expansionDisplay > p {
-  margin-top: 0;
 }
 
 .navigationButtons {
