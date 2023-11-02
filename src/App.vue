@@ -37,10 +37,10 @@
       "
     >
       <p v-if="correctAnswers[selectedAcronym] === true">
-        You got it right!
+        You got it right 🎉
       </p>
       <p v-if="correctAnswers[selectedAcronym] === false">
-        You got it wrong :(
+        You got it wrong 😭
       </p>
       <p v-if="correctAnswers[selectedAcronym] !== undefined">
         {{ acronyms[selectedAcronym].acronym }} =
