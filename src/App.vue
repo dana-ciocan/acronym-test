@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SpecialButton from './components/SpecialButton/SpecialButton.vue';
 import AppHeader from './components/AppHeader/AppHeader.vue';
+import VictoryScreen from './components/VictoryScreen/VictoryScreen.vue';
 </script>
 
 <template>
@@ -49,14 +50,13 @@ import AppHeader from './components/AppHeader/AppHeader.vue';
       </p>
     </div>
   </div>
-  <div class="resultContainer" v-if="selectedAcronym === acronyms.length">
-    <p>The test is complete!</p>
-    <p>
-      You scored
-      {{ correctAnswers.filter((answer) => answer === true).length }} out of
-      {{ acronyms.length }}
-    </p>
-  </div>
+  <VictoryScreen
+    v-if="selectedAcronym === acronyms.length"
+    :numCorrectAnswers="
+      correctAnswers.filter((answer) => answer === true).length
+    "
+    :totalAcronyms="acronyms.length"
+  />
 </template>
 
 <script lang="ts">
@@ -72,7 +72,7 @@ export default defineComponent({
   data: () => ({
     userDefinition: '',
     message: '',
-    acronyms: shuffledAcronyms.slice(0, 10),
+    acronyms: shuffledAcronyms.slice(0, 5),
     correctAnswers: [] as Boolean[],
     selectedAcronym: 0,
     messageClass: '',
