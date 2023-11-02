@@ -1,5 +1,5 @@
 export type Acronym = {
   acronym: string;
-  expansion: string;
+  expansions: string[];
   definition: string;
 };

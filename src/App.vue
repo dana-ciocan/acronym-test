@@ -42,7 +42,7 @@
       </p>
       <p v-if="correctAnswers[selectedAcronym] !== undefined">
         {{ acronyms[selectedAcronym].acronym }} =
-        {{ acronyms[selectedAcronym].expansion }}
+        {{ acronyms[selectedAcronym].expansions[0] }}
       </p>
       <p v-if="correctAnswers[selectedAcronym] !== undefined">
         {{ acronyms[selectedAcronym].definition }}
@@ -60,10 +60,9 @@
 </template>
 
 <script lang="ts">
-console.log("is this running?");
-import acronyms from "./data/acronyms.json";
-import { defineComponent } from "vue";
-import { Acronym } from "./types/acronym";
+import acronyms from './data/acronyms.json';
+import { defineComponent } from 'vue';
+import { Acronym } from './types/acronym';
 
 const shuffledAcronyms: Acronym[] = acronyms
   .sort(() => Math.random() - 0.5)
@@ -71,29 +70,35 @@ const shuffledAcronyms: Acronym[] = acronyms
 
 export default defineComponent({
   data: () => ({
-    userDefinition: "",
-    message: "",
+    userDefinition: '',
+    message: '',
     acronyms: shuffledAcronyms,
     correctAnswers: [] as Boolean[],
     selectedAcronym: 0,
-    messageClass: "",
+    messageClass: '',
     percentageComplete: 0,
   }),
-  name: "App",
+  name: 'App',
   components: {},
   methods: {
     incrementAcronymNumber() {
       const answerElement: any = this.$refs.answer;
       this.selectedAcronym++;
       answerElement.disabled = false;
-      answerElement.value = "";
+      answerElement.value = '';
       answerElement.focus();
     },
     checkAnswer() {
       const answerElement: any = this.$refs.answer;
-      this.correctAnswers[this.selectedAcronym] =
-        answerElement.value.toLowerCase() ===
-        acronyms[this.selectedAcronym].expansion.toLowerCase();
+      const lowercaseExpansions = acronyms[this.selectedAcronym].expansions.map(
+        (expansion) => {
+          return expansion.toLowerCase();
+        },
+      );
+      console.log(lowercaseExpansions);
+      this.correctAnswers[this.selectedAcronym] = lowercaseExpansions.includes(
+        answerElement.value.toLowerCase(),
+      );
     },
   },
 });
@@ -167,7 +172,7 @@ p {
   width: 15rem;
 }
 
-input[type="text"] {
+input[type='text'] {
   font-size: 3rem;
   width: 100%;
 }
@@ -178,7 +183,7 @@ input[type="text"] {
     margin: 0 auto;
   }
 
-  input[type="text"] {
+  input[type='text'] {
     font-size: 2rem;
     width: 75%;
   }
@@ -202,7 +207,7 @@ input[type="text"] {
     font-size: 1rem;
   }
 
-  input[type="text"] {
+  input[type='text'] {
     font-size: 1.5rem;
     width: 30rem;
   }
