@@ -36,9 +36,7 @@
           : 'incorrectAnswer'
       "
     >
-      <p v-if="correctAnswers[selectedAcronym] === true">
-        You got it right 🎉
-      </p>
+      <p v-if="correctAnswers[selectedAcronym] === true">You got it right 🎉</p>
       <p v-if="correctAnswers[selectedAcronym] === false">
         You got it wrong 😭
       </p>
@@ -55,17 +53,17 @@
     <p>The test is complete!</p>
     <p>
       You scored
-      {{ correctAnswers.filter(answer => answer === true).length }} out of
+      {{ correctAnswers.filter((answer) => answer === true).length }} out of
       {{ acronyms.length }}
     </p>
   </div>
 </template>
 
 <script lang="ts">
-console.log('is this running?');
-import acronyms from './data/acronyms.json';
-import { defineComponent } from 'vue';
-import { Acronym } from './types/acronym';
+console.log("is this running?");
+import acronyms from "./data/acronyms.json";
+import { defineComponent } from "vue";
+import { Acronym } from "./types/acronym";
 
 const shuffledAcronyms: Acronym[] = acronyms
   .sort(() => Math.random() - 0.5)
@@ -73,22 +71,22 @@ const shuffledAcronyms: Acronym[] = acronyms
 
 export default defineComponent({
   data: () => ({
-    userDefinition: '',
-    message: '',
+    userDefinition: "",
+    message: "",
     acronyms: shuffledAcronyms,
     correctAnswers: [] as Boolean[],
     selectedAcronym: 0,
-    messageClass: '',
+    messageClass: "",
     percentageComplete: 0,
   }),
-  name: 'App',
+  name: "App",
   components: {},
   methods: {
     incrementAcronymNumber() {
       const answerElement: any = this.$refs.answer;
       this.selectedAcronym++;
       answerElement.disabled = false;
-      answerElement.value = '';
+      answerElement.value = "";
       answerElement.focus();
     },
     checkAnswer() {
@@ -153,7 +151,8 @@ p {
 }
 
 .navigationButtons button {
-  background-color: purple; /* Green */
+  background-color: purple;
+  /* Green */
   border: none;
   color: white;
   font-weight: bold;
@@ -168,7 +167,7 @@ p {
   width: 15rem;
 }
 
-input[type='text'] {
+input[type="text"] {
   font-size: 3rem;
   width: 100%;
 }
@@ -179,7 +178,7 @@ input[type='text'] {
     margin: 0 auto;
   }
 
-  input[type='text'] {
+  input[type="text"] {
     font-size: 2rem;
     width: 75%;
   }
@@ -203,7 +202,7 @@ input[type='text'] {
     font-size: 1rem;
   }
 
-  input[type='text'] {
+  input[type="text"] {
     font-size: 1.5rem;
     width: 30rem;
   }
