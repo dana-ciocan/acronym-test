@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import SpecialButton from './components/SpecialButton/SpecialButton.vue';
+import AppHeader from './components/AppHeader/AppHeader.vue';
 </script>
 
 <template>
   <div class="testContainer" v-if="selectedAcronym < acronyms.length">
-    <h2>
-      Acronym {{ selectedAcronym + 1 }}/{{ acronyms.length }}:
-      {{ acronyms[selectedAcronym].acronym }}
-    </h2>
-    <p>What does this acronym stand for?</p>
+    <AppHeader
+      :numAcronym="selectedAcronym + 1"
+      :totalAcronyms="acronyms.length"
+      :curAcronym="acronyms[selectedAcronym].acronym"
+    />
     <div class="answerInput">
       <input
         type="text"
@@ -25,12 +26,6 @@ import SpecialButton from './components/SpecialButton/SpecialButton.vue';
             : 'Next acronym >>'
         }}
       </SpecialButton>
-      <!-- <SpecialButton
-        clickFunction="incrementAcronymNumber"
-        shouldDisplay="correctAnswers[selectedAcronym] !== undefined"
-      >
-        Next acronym >>
-      </SpecialButton> -->
     </div>
     <div
       class="expansionDisplay"
@@ -73,6 +68,9 @@ const shuffledAcronyms: Acronym[] = acronyms
   .sort(() => Math.random() - 0.5)
   .slice(0, 10);
 
+console.log(shuffledAcronyms);
+console.log(shuffledAcronyms.length);
+
 export default defineComponent({
   data: () => ({
     userDefinition: '',
@@ -83,7 +81,7 @@ export default defineComponent({
     messageClass: '',
     percentageComplete: 0,
   }),
-  name: 'App',
+  name: 'AWS Acronym checker',
   components: {},
   methods: {
     incrementAcronymNumber() {
