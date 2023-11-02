@@ -1,127 +1,142 @@
 [
   {
     "acronym": "EC2",
-    "expansion": "Elastic Compute Cloud",
+    "expansions": ["Elastic Compute Cloud"],
     "definition": "Amazon Elastic Compute Cloud (EC2) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale computing easier for developers."
   },
   {
     "acronym": "S3",
-    "expansion": "Simple Storage Service",
+    "expansions": ["Simple Storage Service"],
     "definition": "Amazon S3 is object storage built to store and retrieve any amount of data from anywhere. It's a simple storage service that offers industry leading durability, availability, performance, security, and virtually unlimited scalability at very low costs."
   },
   {
     "acronym": "ECS",
-    "expansion": "Elastic Container Service",
+    "expansions": ["Elastic Container Service"],
     "definition": "A highly scalable, fast, container management service that makes it easy to run, stop, and manage Docker containers on a cluster of EC2 instances"
   },
   {
     "acronym": "ECR",
-    "expansion": "Elastic Container Registry",
+    "expansions": ["Elastic Container Registry"],
     "definition": "A fully managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images. Amazon ECR is integrated with Amazon Elastic Container Service (Amazon ECS) and AWS Identity and Access Management (IAM)"
   },
   {
     "acronym": "IAM",
-    "expansion": "Identity and Access Management",
+    "expansions": ["Identity and Access Management"],
     "definition": "A web service that Amazon Web Services (AWS) customers can use to manage users and user permissions within AWS"
   },
   {
     "acronym": "EBS",
-    "expansion": "Elastic Block Store",
+    "expansions": ["Elastic Block Store"],
     "definition": "A service that provides block level storage volumes for use with EC2 instances"
   },
   {
     "acronym": "EFS",
-    "expansion": "Elastic File System",
+    "expansions": ["Elastic File System"],
     "definition": "A file storage service for EC2 instances. Amazon EFS is easy to use and provides a simple interface with which you can create and configure file systems. Amazon EFS storage capacity grows and shrinks automatically as you add and remove files"
   },
   {
     "acronym": "EKS",
-    "expansion": "Elastic Kubernetes Service",
+    "expansions": ["Elastic Kubernetes Service"],
     "definition": "A managed service that simplifies running Kubernetes on AWS without your needing to stand up or maintain your own Kubernetes control plane"
   },
   {
     "acronym": "SNS",
-    "expansion": "Simple Notification Service",
+    "expansions": ["Simple Notification Service"],
     "definition": "A web service that applications, users, and devices can use to instantly send and receive notifications from the cloud"
   },
   {
     "acronym": "SQS",
-    "expansion": "Simple Queue Service",
+    "expansions": ["Simple Queue Service"],
     "definition": "Reliable and scalable hosted queues for storing messages as they travel between computers"
   },
   {
     "acronym": "AWS",
-    "expansion": "Amazon Web Services",
+    "expansions": ["Amazon Web Services"],
     "definition": "An infrastructure web services platform in the cloud for companies of all sizes"
   },
   {
     "acronym": "AZ",
-    "expansion": "Availability Zone",
+    "expansions": ["Availability Zone"],
     "definition": "A distinct location within a Region that's insulated from failures in other Availability Zones, and provides inexpensive, low-latency network connectivity to other Availability Zones in the same Region"
   },
   {
     "acronym": "CDK",
-    "expansion": "Cloud Development Kit",
+    "expansions": ["Cloud Development Kit"],
     "definition": "An open-source software development framework for defining your cloud infrastructure in code and provisioning it through AWS CloudFormation"
   },
   {
     "acronym": "ACL",
-    "expansion": "Access Control List",
+    "expansions": ["Access Control List"],
     "definition": "A document that defines who can access a particular bucket or object. Each bucket and object in Amazon S3 has an ACL. The document defines what each type of user can do, such as write and read permissions"
   },
   {
     "acronym": "AMI",
-    "expansion": "Amazon Machine Image",
+    "expansions": ["Amazon Machine Image"],
     "definition": "An encrypted machine image stored in Amazon Elastic Block Store (Amazon EBS) or Amazon Simple Storage Service. AMIs function similar to a template of a computer's root drive. They contain the operating system and can also include software and layers of your application, such as database servers, middleware, and web servers"
   },
   {
     "acronym": "VPC",
-    "expansion": "Virtual Private Cloud",
+    "expansions": ["Virtual Private Cloud"],
     "definition": "A web service for provisioning a logically isolated section of the AWS Cloud virtual network that you define. You control your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways"
   },
   {
     "acronym": "ASG",
-    "expansion": "Auto Scaling Group",
+    "expansions": ["Auto Scaling Group"],
     "definition": "A representation of multiple EC2 instances that share similar characteristics, and that are treated as a logical grouping for the purposes of instance scaling and management"
   },
   {
     "acronym": "CDN",
-    "expansion": "Content Delivery Network",
+    "expansions": ["Content Delivery Network"],
     "definition": "A web service that speeds up distribution of your static and dynamic web content—such as .html, .css, .js, media files, and image files—to your users by using a worldwide network of data centers. When a user requests your content, the request is routed to the data center that provides the lowest latency (time delay). If the content is already in the location with the lowest latency, the CDN delivers it immediately. If not, the CDN retrieves it from an origin that you specify (for example, a web server or an Amazon S3 bucket). With some CDNs, you can help secure your content by configuring an HTTPS connection between users and data centers, and between data centers and your origin. Amazon CloudFront is an example of a CDN."
   },
   {
     "acronym": "CLI",
-    "expansion": "Command Line Interface",
+    "expansions": ["Command Line Interface"],
     "definition": "A unified downloadable and configurable tool for managing AWS services. Control multiple AWS services from the command line and automate them through scripts."
   },
   {
-    "acronym": "EMR",
-    "expansion": "Elastic MapReduce",
-    "definition": ""
-  },
-  {
     "acronym": "BI",
-    "expansion": "Business Intelligence",
+    "expansions": ["Business Intelligence"],
     "definition": "The strategies and technologies used by enterprises for the data analysis of business information"
   },
   {
     "acronym": "QLDB",
-    "expansion": "Quantum Ledger Database",
+    "expansions": ["Quantum Ledger Database"],
     "definition": "A fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log ‎owned by a central trusted authority"
   },
   {
     "acronym": "DMS",
-    "expansion": "Database Migration Service",
+    "expansions": ["Database Migration Service"],
     "definition": "A web service that can help you migrate data to and from many widely used commercial and open-source databases"
   },
   {
     "acronym": "ETL",
-    "expansion": "Extract, transform and load",
+    "expansions": ["Extract, transform and load", "Extract transform load"],
     "definition": "A process that's used to integrate data from multiple sources. Data is collected from sources (extract), converted to an appropriate format (transform), and written to a target data store (load) for purposes of analysis and querying. AWS Glue is an ETL service"
   },
   {
     "acronym": "DAX",
-    "expansion": "DynamoDB Accelerator",
+    "expansions": ["DynamoDB Accelerator"],
     "definition": "a fully managed, highly available, in-memory cache for Amazon DynamoDB that delivers up to a 10 times performance improvement"
+  },
+  {
+    "acronym": "MTBF",
+    "expansions": ["Mean time between failures"],
+    "definition": "The average amount of time that has passed between incidents"
+  },
+  {
+    "acronym": "MTTR",
+    "expansions": ["Mean time to recovery"],
+    "definition": "The average amount of time it takes to recover from an incident"
+  },
+  {
+    "acronym": "RTO",
+    "expansions": ["Recovery Time Objective"],
+    "definition": "The maximum time it should take to restore to normal operations following an outage or data loss"
+  },
+  {
+    "acronym": "RPO",
+    "expansions": ["Recovery Point Objective"],
+    "definition": "The maximum amount of data an organisation can tolerate losing; measured in time from the moment a failure occurs to the last backup. i.e. if a failure occurs and the last backup was 24 hours ago, the RPO is 24 hours"
   }
 ]
