@@ -4,7 +4,7 @@
 
 <style>
 button {
-  background-color: purple;
+  background-color: rebeccapurple;
   border: none;
   color: white;
   font-weight: bold;
@@ -16,7 +16,7 @@ button {
   border-radius: 0.5rem;
   margin-right: 1rem;
   cursor: pointer;
-  width: 15rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 1200px) {

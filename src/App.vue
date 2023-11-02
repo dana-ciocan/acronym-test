@@ -22,7 +22,7 @@ import AppHeader from './components/AppHeader/AppHeader.vue';
       <SpecialButton @click="checkAnswer">
         {{
           correctAnswers[selectedAcronym] === undefined
-            ? 'Check acronym'
+            ? 'Check answer'
             : 'Next acronym >>'
         }}
       </SpecialButton>
@@ -109,6 +109,8 @@ export default defineComponent({
 <style>
 body {
   margin: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #app {
@@ -119,12 +121,6 @@ body {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
-}
-
-h2 {
-  font-size: 3rem;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
 }
 
 p {
