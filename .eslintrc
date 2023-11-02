@@ -7,7 +7,6 @@
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "plugin:promise/recommended",
-    "prettier/vue",
     "plugin:prettier/recommended",
     "@vue/typescript"
   ],
