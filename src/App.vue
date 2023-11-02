@@ -60,22 +60,19 @@ import AppHeader from './components/AppHeader/AppHeader.vue';
 </template>
 
 <script lang="ts">
-import acronyms from './data/acronyms.json';
+import availableAcronyms from './data/acronyms.json';
 import { defineComponent } from 'vue';
 import { Acronym } from './types/acronym';
 
-const shuffledAcronyms: Acronym[] = acronyms
-  .sort(() => Math.random() - 0.5)
-  .slice(0, 10);
-
-console.log(shuffledAcronyms);
-console.log(shuffledAcronyms.length);
+const shuffledAcronyms: Acronym[] = availableAcronyms.sort(
+  () => Math.random() - 0.5,
+);
 
 export default defineComponent({
   data: () => ({
     userDefinition: '',
     message: '',
-    acronyms: shuffledAcronyms,
+    acronyms: shuffledAcronyms.slice(0, 10),
     correctAnswers: [] as Boolean[],
     selectedAcronym: 0,
     messageClass: '',
@@ -94,7 +91,7 @@ export default defineComponent({
     checkAnswer() {
       if (this.correctAnswers[this.selectedAcronym] === undefined) {
         const answerElement: any = this.$refs.answer;
-        const lowercaseExpansions = acronyms[
+        const lowercaseExpansions = this.acronyms[
           this.selectedAcronym
         ].expansions.map((expansion) => {
           return expansion.toLowerCase();
