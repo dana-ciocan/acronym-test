@@ -121,12 +121,12 @@
   },
   {
     "acronym": "MTBF",
-    "expansions": ["Mean time between failures"],
+    "expansions": ["Mean Time Between Failures"],
     "definition": "The average amount of time that has passed between incidents"
   },
   {
     "acronym": "MTTR",
-    "expansions": ["Mean time to recovery"],
+    "expansions": ["Mean Time To Recovery"],
     "definition": "The average amount of time it takes to recover from an incident"
   },
   {
@@ -138,5 +138,20 @@
     "acronym": "RPO",
     "expansions": ["Recovery Point Objective"],
     "definition": "The maximum amount of data an organisation can tolerate losing; measured in time from the moment a failure occurs to the last backup. i.e. if a failure occurs and the last backup was 24 hours ago, the RPO is 24 hours"
+  },
+  {
+    "acronym": "CUR",
+    "expansions": ["Cost and Usage Report", "Cost Usage Report"],
+    "definition": ""
+  },
+  {
+    "acronym": "ROI",
+    "expansions": ["Return on Investment"],
+    "definition": ""
+  },
+  {
+    "acronym": "CFM",
+    "expansions": ["Cloud Financial Management"],
+    "definition": ""
   }
 ]

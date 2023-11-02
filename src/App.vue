@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import SpecialButton from './components/SpecialButton/SpecialButton.vue';
+</script>
+
 <template>
   <div class="testContainer" v-if="selectedAcronym < acronyms.length">
     <h2>
@@ -14,18 +18,19 @@
       />
     </div>
     <div class="navigationButtons">
-      <button
-        @click="checkAnswer"
-        v-if="correctAnswers[selectedAcronym] === undefined"
-      >
-        Check answer
-      </button>
-      <button
-        @click="incrementAcronymNumber"
-        v-if="correctAnswers[selectedAcronym] !== undefined"
+      <SpecialButton @click="checkAnswer">
+        {{
+          correctAnswers[selectedAcronym] === undefined
+            ? 'Check acronym'
+            : 'Next acronym >>'
+        }}
+      </SpecialButton>
+      <!-- <SpecialButton
+        clickFunction="incrementAcronymNumber"
+        shouldDisplay="correctAnswers[selectedAcronym] !== undefined"
       >
         Next acronym >>
-      </button>
+      </SpecialButton> -->
     </div>
     <div
       class="expansionDisplay"
@@ -89,16 +94,18 @@ export default defineComponent({
       answerElement.focus();
     },
     checkAnswer() {
-      const answerElement: any = this.$refs.answer;
-      const lowercaseExpansions = acronyms[this.selectedAcronym].expansions.map(
-        (expansion) => {
+      if (this.correctAnswers[this.selectedAcronym] === undefined) {
+        const answerElement: any = this.$refs.answer;
+        const lowercaseExpansions = acronyms[
+          this.selectedAcronym
+        ].expansions.map((expansion) => {
           return expansion.toLowerCase();
-        },
-      );
-      console.log(lowercaseExpansions);
-      this.correctAnswers[this.selectedAcronym] = lowercaseExpansions.includes(
-        answerElement.value.toLowerCase(),
-      );
+        });
+        this.correctAnswers[this.selectedAcronym] =
+          lowercaseExpansions.includes(answerElement.value.toLowerCase());
+      } else {
+        this.incrementAcronymNumber();
+      }
     },
   },
 });
@@ -155,23 +162,6 @@ p {
   margin-top: 2em;
 }
 
-.navigationButtons button {
-  background-color: purple;
-  /* Green */
-  border: none;
-  color: white;
-  font-weight: bold;
-  padding: 1rem 2rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 2rem;
-  border-radius: 0.5rem;
-  margin-right: 1rem;
-  cursor: pointer;
-  width: 15rem;
-}
-
 input[type='text'] {
   font-size: 3rem;
   width: 100%;
@@ -201,10 +191,6 @@ input[type='text'] {
 
   p {
     font-size: 1.25rem;
-  }
-
-  .navigationButtons button {
-    font-size: 1rem;
   }
 
   input[type='text'] {
