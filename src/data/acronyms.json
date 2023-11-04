@@ -141,17 +141,37 @@
   },
   {
     "acronym": "CUR",
-    "expansions": ["Cost and Usage Report", "Cost Usage Report"],
-    "definition": ""
+    "expansions": ["Cost and Usage Report", "Cost Usage Report", "Cost and Usage Reports"],
+    "definition": "The AWS Cost and Usage Reports (AWS CUR) contains the most comprehensive set of cost and usage data available. You can use Cost and Usage Reports to publish your AWS billing reports to an Amazon Simple Storage Service (Amazon S3) bucket that you own. You can receive reports that break down your costs by the hour, day, or month, by product or product resource, or by tags that you define yourself. AWS updates the report in your bucket once a day in comma-separated value (CSV) format. You can view the reports using spreadsheet software such as Microsoft Excel or Apache OpenOffice Calc, or access them from an application using the Amazon S3 API"
   },
   {
     "acronym": "ROI",
     "expansions": ["Return on Investment"],
-    "definition": ""
+    "definition": "A performance measure used to evaluate the efficiency or profitability of an investment or compare the efficiency of a number of different investments"
   },
   {
     "acronym": "CFM",
     "expansions": ["Cloud Financial Management"],
-    "definition": ""
+    "definition": "CFM solutions help transform your business through cost transparency, control, forecasting, and optimization. These solutions can also help enable a cost-conscious culture that drives accountability across all teams and functions. Finance teams can see where costs are coming from, run operations with minimal unexpected expenses, plan for dynamic cloud usage, and save on cloud expenses while teams scale their adoptions on the cloud. Sharing this with engineering teams can provide necessary financial context for their resource selection, use, and optimization."
+  },
+  {
+    "acronym": "MSK",
+    "expansions": ["Amazon Managed Streaming for Apache Kafka"],
+    "definition": "A fully managed service that enables you to build and run applications that use Apache Kafka to process streaming data"
+  },
+  {
+    "acronym": "GSI",
+    "expansions": ["Global Secondary Index"],
+    "definition": "In DynamoDB, you can create a global secondary index any time after creating a base table. In a global secondary index, the partition and hash keys can be different than the base table"
+  },
+  {
+    "acronym": "LSI",
+    "expansions": ["Local Secondary Index"],
+    "definition": "In DynamoDB, you can create a global secondary index at table creation time"
+  },
+  {
+    "acronym": "ACID",
+    "expansions": ["Atomicity Consistency Isolation Durability"],
+    "definition": "Type of transaction used by Amazon QLDB. Data storage systems that apply these are called transactional systems"
   }
 ]
