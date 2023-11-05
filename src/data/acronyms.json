@@ -173,5 +173,35 @@
     "acronym": "ACID",
     "expansions": ["Atomicity Consistency Isolation Durability"],
     "definition": "Type of transaction used by Amazon QLDB. Data storage systems that apply these are called transactional systems"
+  },
+  {
+    "acronym": "STS",
+    "expansions": ["Security Token Service"],
+    "definition": "Service used to generate tokens for IAM roles"
+  },
+  {
+    "acronym": "SAML",
+    "expansions": ["Security Assertion Markup Language"],
+    "definition": "SAML enables you to access multiple web applications using one set of login credentials. It works by passing authentication information in a particular format between two parties, usually an identity provider (idP) and a web application"
+  },
+  {
+    "acronym": "IDP",
+    "expansions": ["Identity Provider"],
+    "definition": "A service that stores and verifies user identity. IdPs are typically cloud-hosted services, and they often work with single sign-on (SSO) providers to authenticate users"
+  },
+  {
+    "acronym": "SSO",
+    "expansions": ["Single Sign On"],
+    "definition": "A session and user authentication service that permits a user to use one set of login credentials for multiple services"
+  },
+  {
+    "acronym": "NACL",
+    "expansions": ["Network Access Control List"],
+    "definition": "Subnet level firewall"
+  },
+  {
+    "acronym": "SG",
+    "expansions": ["Security Group"],
+    "definition": "EC2 instance level firewall"
   }
 ]
