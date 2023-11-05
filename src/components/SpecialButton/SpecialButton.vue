@@ -14,7 +14,6 @@ button {
   display: inline-block;
   font-size: 2rem;
   border-radius: 0.5rem;
-  margin-right: 1rem;
   cursor: pointer;
   width: 100%;
 }

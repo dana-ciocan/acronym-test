@@ -128,6 +128,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+  width: 100%;
 }
 
 p {
@@ -142,6 +143,7 @@ p {
 textarea {
   font-size: 3rem;
   height: 10rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 60rem) {
