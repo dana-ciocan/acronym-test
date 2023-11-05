@@ -125,6 +125,8 @@ body {
 .answer-input {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2.5rem;
 }
 
@@ -166,14 +168,8 @@ textarea {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-  }
-
-  .answer-input {
-    display: flex;
-    flex-direction: row;
-    gap: 2.5rem;
   }
 
   textarea {
@@ -197,9 +193,11 @@ textarea {
     font-size: 1.25rem;
   }
 
-  input[type='text'] {
-    font-size: 1.5rem;
+  textarea {
+    margin-bottom: 3rem;
+    font-size: 2rem;
     width: 30rem;
+    height: 6rem;
   }
 }
 </style>

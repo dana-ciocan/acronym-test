@@ -55,4 +55,12 @@ const props = defineProps<{
 .expansion-display {
   margin-top: 2rem;
 }
+
+@media screen and (min-width: 60rem) {
+  .expansion-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>

@@ -31,6 +31,16 @@ const props = defineProps<{
   justify-content: center;
   background-color: rebeccapurple;
 }
+
+@media screen and (min-width: 75rem) {
+  .victory-container h1 {
+    font-size: 3rem;
+  }
+
+  .victory-container p {
+    font-size: 2.25rem;
+  }
+}
 </style>
 
 <template>
