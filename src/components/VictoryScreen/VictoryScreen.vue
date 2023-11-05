@@ -11,14 +11,17 @@ const props = defineProps<{
   text-align: center;
   font-size: 2.25rem;
 }
+
 .victory-container p {
   color: white;
 }
+
 .victory-container .tada {
   margin-top: 2rem;
   font-size: 4rem;
   text-align: center;
 }
+
 .victory-container {
   height: 100vh;
   width: 100vw;

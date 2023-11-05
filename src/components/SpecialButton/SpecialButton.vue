@@ -19,9 +19,10 @@ button {
   width: 100%;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 75rem) {
   button {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    width: 20rem;
   }
 }
 </style>

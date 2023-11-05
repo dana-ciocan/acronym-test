@@ -6,7 +6,7 @@ import ExpansionDisplay from './components/ExpansionDisplay/ExpansionDisplay.vue
 </script>
 
 <template>
-  <div class="testContainer" v-if="selectedAcronym < acronyms.length">
+  <div class="test-container" v-if="selectedAcronym < acronyms.length">
     <AppHeader
       :numAcronym="selectedAcronym + 1"
       :totalAcronyms="acronyms.length"
@@ -19,8 +19,6 @@ import ExpansionDisplay from './components/ExpansionDisplay/ExpansionDisplay.vue
         :disabled="correctAnswers[selectedAcronym] !== undefined"
         @keyup.enter="checkAnswer"
       />
-    </div>
-    <div class="navigationButtons">
       <SpecialButton @click="checkAnswer">
         {{
           correctAnswers[selectedAcronym] === undefined
@@ -105,16 +103,32 @@ body {
   margin: 0;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
 }
 
 #app {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.testContainer {
+.test-container {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+.answerInput {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 p {
@@ -131,10 +145,38 @@ input[type='text'] {
   width: 100%;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 60rem) {
+  body {
+    background: rebeccapurple;
+    justify-content: center;
+  }
+
   #app {
-    width: 90%;
+    width: 80vw;
+    height: 60vh;
     margin: 0 auto;
+    background-color: white;
+    border-radius: 3rem;
+    padding: 3rem;
+  }
+
+  #app:has(.victory-container) {
+    background-color: rebeccapurple;
+  }
+
+  .test-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .answerInput {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
   }
 
   input[type='text'] {
@@ -143,7 +185,7 @@ input[type='text'] {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 75rem) {
   #app {
     width: 75%;
     margin: 0 auto;
