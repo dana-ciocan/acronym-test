@@ -89,7 +89,9 @@ export default defineComponent({
           return expansion.toLowerCase();
         });
         this.correctAnswers[this.selectedAcronym] =
-          lowercaseExpansions.includes(answerElement.value.toLowerCase());
+          lowercaseExpansions.includes(
+            answerElement.value.toLowerCase().trim(),
+          );
       } else {
         this.incrementAcronymNumber();
       }
