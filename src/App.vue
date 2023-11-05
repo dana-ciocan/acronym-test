@@ -12,32 +12,30 @@ import ExpansionDisplay from './components/ExpansionDisplay/ExpansionDisplay.vue
       :totalAcronyms="acronyms.length"
       :curAcronym="acronyms[selectedAcronym].acronym"
     />
-    <div class="answer-input">
-      <textarea
-        ref="answer"
-        :disabled="correctAnswers[selectedAcronym] !== undefined"
-        @keyup.enter="checkAnswer"
-      />
-      <SpecialButton @click="checkAnswer">
-        {{
-          correctAnswers[selectedAcronym] === undefined
-            ? 'Check answer'
-            : 'Next acronym >>'
-        }}
-      </SpecialButton>
-    </div>
-    <ExpansionDisplay
-      v-if="correctAnswers[selectedAcronym] !== undefined"
-      :isAnswerCorrect="correctAnswers[selectedAcronym] === true"
-      :definition="acronyms[selectedAcronym].definition"
-      :expansion="acronyms[selectedAcronym].expansions[0]"
+    <div
+      class="answer-input"
+      v-if="correctAnswers[selectedAcronym] === undefined"
     >
-      {{
-        correctAnswers[selectedAcronym] === true
-          ? 'You got it right 🎉'
-          : 'You got it wrong 😭'
-      }}
-    </ExpansionDisplay>
+      <textarea ref="answer" @keyup.enter="checkAnswer" />
+      <SpecialButton @click="checkAnswer">Check answer</SpecialButton>
+    </div>
+    <div
+      class="expansion-display"
+      v-if="correctAnswers[selectedAcronym] !== undefined"
+    >
+      <ExpansionDisplay
+        :isAnswerCorrect="correctAnswers[selectedAcronym] === true"
+        :definition="acronyms[selectedAcronym].definition"
+        :expansion="acronyms[selectedAcronym].expansions[0]"
+      >
+        {{
+          correctAnswers[selectedAcronym] === true
+            ? 'You got it right 🎉'
+            : 'You got it wrong 😭'
+        }}
+      </ExpansionDisplay>
+      <SpecialButton @click="checkAnswer">Next acronym</SpecialButton>
+    </div>
   </div>
   <VictoryScreen
     v-if="selectedAcronym === acronyms.length"
@@ -71,11 +69,7 @@ export default defineComponent({
   components: {},
   methods: {
     incrementAcronymNumber() {
-      const answerElement: any = this.$refs.answer;
       this.selectedAcronym++;
-      answerElement.disabled = false;
-      answerElement.value = '';
-      answerElement.focus();
     },
     checkAnswer() {
       if (this.correctAnswers[this.selectedAcronym] === undefined) {
@@ -122,6 +116,10 @@ body {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+.expansion-display {
+  margin-bottom: 2rem;
 }
 
 .answer-input {
