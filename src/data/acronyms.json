@@ -156,7 +156,7 @@
   },
   {
     "acronym": "MSK",
-    "expansions": ["Amazon Managed Streaming for Apache Kafka"],
+    "expansions": ["Managed Streaming for Apache Kafka"],
     "definition": "A fully managed service that enables you to build and run applications that use Apache Kafka to process streaming data"
   },
   {
@@ -221,8 +221,8 @@
   },
   {
     "acronym": "PKCS",
-    "expansions": ["Security Group"],
-    "definition": "EC2 instance level firewall"
+    "expansions": ["Public Key Cryptography Standards"],
+    "definition": "Standards developed to enable secure information exchange via a public key infrastructure"
   },
   {
     "acronym": "JCE",
