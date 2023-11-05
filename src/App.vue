@@ -12,9 +12,8 @@ import ExpansionDisplay from './components/ExpansionDisplay/ExpansionDisplay.vue
       :totalAcronyms="acronyms.length"
       :curAcronym="acronyms[selectedAcronym].acronym"
     />
-    <div class="answerInput">
-      <input
-        type="text"
+    <div class="answer-input">
+      <textarea
         ref="answer"
         :disabled="correctAnswers[selectedAcronym] !== undefined"
         @keyup.enter="checkAnswer"
@@ -125,7 +124,7 @@ body {
   box-sizing: border-box;
 }
 
-.answerInput {
+.answer-input {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -140,9 +139,9 @@ p {
   margin-top: 2em;
 }
 
-input[type='text'] {
+textarea {
   font-size: 3rem;
-  width: 100%;
+  height: 10rem;
 }
 
 @media screen and (min-width: 60rem) {
@@ -173,14 +172,15 @@ input[type='text'] {
     align-items: center;
   }
 
-  .answerInput {
+  .answer-input {
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
   }
 
-  input[type='text'] {
-    font-size: 2rem;
+  textarea {
+    font-size: 2.5rem;
+    height: 3.5rem;
     width: 75%;
   }
 }

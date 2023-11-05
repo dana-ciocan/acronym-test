@@ -22,7 +22,7 @@ button {
 @media screen and (min-width: 75rem) {
   button {
     font-size: 1.5rem;
-    width: 20rem;
+    width: 25rem;
   }
 }
 </style>
