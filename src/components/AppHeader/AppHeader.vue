@@ -7,18 +7,22 @@ const props = defineProps<{
 </script>
 
 <style>
-h2 {
+header {
+  width: 100%;
+}
+
+header h2 {
   font-size: 2.5rem;
   margin: 0;
   text-align: center;
 }
 
-p {
+header p {
   font-size: 1.5rem;
   text-align: center;
 }
 
-dfn {
+header dfn {
   font-size: 4rem;
   font-style: normal;
   font-weight: bold;
@@ -26,6 +30,12 @@ dfn {
   display: block;
   text-align: center;
   padding-top: 2rem;
+}
+
+@media screen and (min-width: 60rem) {
+  header p {
+    font-size: 2rem;
+  }
 }
 </style>
 

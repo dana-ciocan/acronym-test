@@ -40,7 +40,7 @@ const props = defineProps<{
 }
 
 .expansion-display details {
-  margin-top: 2rem;
+  margin: 2rem 0;
   border-radius: 1rem;
   padding: 1.5rem;
   border: 1px solid rebeccapurple;

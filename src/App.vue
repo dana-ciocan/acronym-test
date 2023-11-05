@@ -20,7 +20,7 @@ import ExpansionDisplay from './components/ExpansionDisplay/ExpansionDisplay.vue
       <SpecialButton @click="checkAnswer">Check answer</SpecialButton>
     </div>
     <div
-      class="expansion-display"
+      class="expansion-display-container"
       v-if="correctAnswers[selectedAcronym] !== undefined"
     >
       <ExpansionDisplay
@@ -118,8 +118,11 @@ body {
   box-sizing: border-box;
 }
 
-.expansion-display {
-  margin-bottom: 2rem;
+.expansion-display-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
 }
 
 .answer-input {
@@ -136,10 +139,6 @@ p {
   font-size: 2rem;
 }
 
-.navigationButtons {
-  margin-top: 2em;
-}
-
 textarea {
   font-size: 3rem;
   height: 10rem;
@@ -154,7 +153,7 @@ textarea {
 
   #app {
     width: 80vw;
-    height: 60vh;
+    min-height: 80vh;
     margin: 0 auto;
     background-color: white;
     border-radius: 3rem;
@@ -166,7 +165,7 @@ textarea {
   }
 
   .test-container {
-    width: 50%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -175,9 +174,10 @@ textarea {
   }
 
   textarea {
-    font-size: 2.5rem;
-    height: 3.5rem;
-    width: 75%;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    width: 30rem;
+    height: 6rem;
   }
 }
 
@@ -185,6 +185,7 @@ textarea {
   #app {
     width: 75%;
     margin: 0 auto;
+    min-height: 60vh;
   }
 
   h2 {
@@ -193,13 +194,6 @@ textarea {
 
   p {
     font-size: 1.25rem;
-  }
-
-  textarea {
-    margin-bottom: 3rem;
-    font-size: 2rem;
-    width: 30rem;
-    height: 6rem;
   }
 }
 </style>

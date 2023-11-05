@@ -248,5 +248,25 @@
     "acronym": "KMS",
     "expansions": ["Key Management Service"],
     "definition": "AWS service for creating and managing cryptographic keys"
+  },
+  {
+    "acronym": "NFS",
+    "expansions": ["Network File System"],
+    "definition": "A protocol for distributed file system; used by EFS and Network Attached Storage devices"
+  },
+  {
+    "acronym": "CIDR",
+    "expansions": ["Classless Inter-Domain Routing"],
+    "definition": "The method used to specify IP addresses for a subnet or VPC; uses / followed by a number to indicate subnet mask"
+  },
+  {
+    "acronym": "SES",
+    "expansions": ["Simple Email Service"],
+    "definition": "Managed email automation service; usually a distractor on the exam"
+  },
+  {
+    "acronym": "FIFO",
+    "expansions": ["First-in first-out", "First in first out"],
+    "definition": "In the context of SQS, FIFO means that the messages are processed in the order in which they arrive"
   }
 ]
