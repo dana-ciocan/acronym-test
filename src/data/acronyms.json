@@ -203,5 +203,50 @@
     "acronym": "SG",
     "expansions": ["Security Group"],
     "definition": "EC2 instance level firewall"
+  },
+  {
+    "acronym": "HSM",
+    "expansions": ["Hardware Security Module"],
+    "definition": "EC2 instance level firewall"
+  },
+  {
+    "acronym": "FIPS",
+    "expansions": ["Federal Information Processing Standards"],
+    "definition": "EC2 instance level firewall"
+  },
+  {
+    "acronym": "AD",
+    "expansions": ["Active Directory"],
+    "definition": "EC2 instance level firewall"
+  },
+  {
+    "acronym": "PKCS",
+    "expansions": ["Security Group"],
+    "definition": "EC2 instance level firewall"
+  },
+  {
+    "acronym": "JCE",
+    "expansions": ["Java Cryptography Extension"],
+    "definition": "Provides a framework and implementation for encryption, key generation and key agreement, and Message Authentication Code (MAC) algorithms"
+  },
+  {
+    "acronym": "CNG",
+    "expansions": ["Cryptography API: Next Generation"],
+    "definition": "Designed by Microsoft and intended for use by developers of applications that will enable users to create and exchange documents and other data in a secure environment, especially over non-secure media such as the Internet"
+  },
+  {
+    "acronym": "VPN",
+    "expansions": ["Virtual Private Network"],
+    "definition": "An encrypted tunnel through the internet connecting two devices or networks"
+  },
+  {
+    "acronym": "RAM",
+    "expansions": ["Resource Access Manager"g],
+    "definition": "An AWS service that allows you to share resources between accounts"
+  },
+  {
+    "acronym": "KMS",
+    "expansions": ["Key Management Service"],
+    "definition": "AWS service for creating and managing cryptographic keys"
   }
 ]
