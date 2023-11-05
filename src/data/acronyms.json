@@ -167,7 +167,7 @@
   {
     "acronym": "LSI",
     "expansions": ["Local Secondary Index"],
-    "definition": "In DynamoDB, you can create a global secondary index at table creation time"
+    "definition": "In DynamoDB, you can create a local secondary index at any time and this allows you to perform queries on items that are not the partition or sort key"
   },
   {
     "acronym": "ACID",
@@ -241,7 +241,7 @@
   },
   {
     "acronym": "RAM",
-    "expansions": ["Resource Access Manager"g],
+    "expansions": ["Resource Access Manager"],
     "definition": "An AWS service that allows you to share resources between accounts"
   },
   {
