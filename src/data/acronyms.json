@@ -117,7 +117,7 @@
   {
     "acronym": "DAX",
     "expansions": ["DynamoDB Accelerator"],
-    "definition": "a fully managed, highly available, in-memory cache for Amazon DynamoDB that delivers up to a 10 times performance improvement"
+    "definition": "A fully managed, highly available, in-memory cache for Amazon DynamoDB that delivers up to a 10 times performance improvement"
   },
   {
     "acronym": "MTBF",
