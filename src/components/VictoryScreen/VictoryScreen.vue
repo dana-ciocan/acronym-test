@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SpecialButton from '../SpecialButton/SpecialButton.vue';
+
 const props = defineProps<{
   numCorrectAnswers: number;
   totalAcronyms: number;
@@ -17,14 +19,14 @@ const props = defineProps<{
 }
 
 .victory-container .tada {
-  margin-top: 2rem;
+  margin: 2rem 0 4rem 0;
   font-size: 4rem;
   text-align: center;
 }
 
 .victory-container {
   height: 100vh;
-  width: 100vw;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +35,10 @@ const props = defineProps<{
 }
 
 @media screen and (min-width: 75rem) {
+  .victory-container {
+    width: 100vw;
+  }
+
   .victory-container h1 {
     font-size: 3rem;
   }
@@ -57,5 +63,6 @@ const props = defineProps<{
     <p v-if="props.numCorrectAnswers < props.totalAcronyms">
       😔 better luck next time!
     </p>
+    <SpecialButton :inverted="true">Play again?</SpecialButton>
   </div>
 </template>

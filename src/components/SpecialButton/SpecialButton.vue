@@ -1,5 +1,11 @@
+<script setup lang="ts">
+const props = defineProps<{
+  inverted: boolean;
+}>();
+</script>
+
 <template>
-  <button><slot /></button>
+  <button :class="props.inverted ? 'inverted' : undefined"><slot /></button>
 </template>
 
 <style>
@@ -16,6 +22,11 @@ button {
   border-radius: 0.5rem;
   cursor: pointer;
   width: 100%;
+}
+
+button.inverted {
+  color: rebeccapurple;
+  background-color: white;
 }
 
 @media screen and (min-width: 75rem) {
