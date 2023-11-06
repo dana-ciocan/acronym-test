@@ -44,12 +44,14 @@ const props = defineProps<{
   border-radius: 1rem;
   padding: 1.5rem;
   border: 1px solid rebeccapurple;
+  width: 100%;
 }
 
 .expansion-display summary {
   font-weight: bold;
   font-size: 2rem;
   color: rebeccapurple;
+  width: 100%;
 }
 
 .expansion-display {
@@ -61,6 +63,7 @@ const props = defineProps<{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 }
 </style>

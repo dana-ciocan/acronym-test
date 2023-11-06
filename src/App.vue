@@ -122,7 +122,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   height: 60%;
+  width: 100%;
 }
 
 .answer-input {
@@ -165,7 +167,7 @@ textarea {
   }
 
   .test-container {
-    width: 70%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -174,18 +176,18 @@ textarea {
   }
 
   textarea {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     font-size: 2rem;
     width: 30rem;
-    height: 6rem;
+    height: 10rem;
   }
 }
 
 @media screen and (min-width: 75rem) {
   #app {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
-    min-height: 60vh;
+    min-height: 80vh;
   }
 
   h2 {
