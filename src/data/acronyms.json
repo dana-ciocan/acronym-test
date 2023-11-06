@@ -320,7 +320,7 @@
     "definition": "The process of recovering from a partial outage, usually by creating a resilient architecture that can fail over to another region"
   },
   {
-    "acronym": "IPOS",
+    "acronym": "IOPS",
     "expansions": ["Input/Output Operations Per Second", "Input Output Operations Per Second"],
     "definition": "A common unit of measurement for storage system performance based on drive speed and workload type"
   },
