@@ -7,7 +7,7 @@
   {
     "acronym": "S3",
     "expansions": ["Simple Storage Service"],
-    "definition": "Amazon S3 is object storage built to store and retrieve any amount of data from anywhere. It's a simple storage service that offers industry leading durability, availability, performance, security, and virtually unlimited scalability at very low costs."
+    "definition": "Amazon S3 is object storage built to store and retrieve any amount of data from anywhere. It offers high durability, availability, performance, security, and virtually unlimited scalability at very low costs"
   },
   {
     "acronym": "ECS",
@@ -376,7 +376,7 @@
   },
   {
     "acronym": "FTPS",
-    "expansions": ["Secure File Transfer Protocol"],
+    "expansions": ["File Transfer Protocol Secure"],
     "definition": "A secure way to upload and download files to servers; adds a layer of encryption using SSL or TLS; uses port 989"
   },
   {
