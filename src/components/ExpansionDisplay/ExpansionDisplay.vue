@@ -47,6 +47,10 @@ const props = defineProps<{
   width: 100%;
 }
 
+.expansion-display details:hover {
+  cursor: pointer;
+}
+
 .expansion-display summary {
   font-weight: bold;
   font-size: 2rem;
