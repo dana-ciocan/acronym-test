@@ -63,6 +63,8 @@ const props = defineProps<{
     <p v-if="props.numCorrectAnswers < props.totalAcronyms">
       😔 better luck next time!
     </p>
-    <SpecialButton :inverted="true">Play again?</SpecialButton>
+    <SpecialButton :inverted="true" @click="$emit('clear-game')"
+      >Play again?</SpecialButton
+    >
   </div>
 </template>

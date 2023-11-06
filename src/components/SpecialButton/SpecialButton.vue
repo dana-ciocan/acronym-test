@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  inverted: boolean;
+  inverted?: boolean;
 }>();
 </script>
 

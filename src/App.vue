@@ -43,6 +43,7 @@ import ExpansionDisplay from './components/ExpansionDisplay/ExpansionDisplay.vue
       correctAnswers.filter((answer) => answer === true).length
     "
     :totalAcronyms="acronyms.length"
+    @clear-game="clearGame"
   />
 </template>
 
@@ -51,25 +52,26 @@ import availableAcronyms from './data/acronyms.json';
 import { defineComponent } from 'vue';
 import { Acronym } from './types/acronym';
 
-const shuffledAcronyms: Acronym[] = availableAcronyms.sort(
-  () => Math.random() - 0.5,
-);
+const shuffleAcronyms = (acronyms: Acronym[]): Acronym[] => {
+  return acronyms.sort(() => Math.random() - 0.5);
+};
 
 export default defineComponent({
   data: () => ({
-    userDefinition: '',
-    message: '',
-    acronyms: shuffledAcronyms.slice(0, 5),
+    acronyms: shuffleAcronyms(availableAcronyms).slice(0, 5),
     correctAnswers: [] as Boolean[],
     selectedAcronym: 0,
-    messageClass: '',
-    percentageComplete: 0,
   }),
   name: 'AWS Acronym checker',
   components: {},
   methods: {
     incrementAcronymNumber() {
       this.selectedAcronym++;
+    },
+    clearGame() {
+      this.acronyms = shuffleAcronyms(availableAcronyms).slice(0, 5);
+      this.correctAnswers = [] as Boolean[];
+      this.selectedAcronym = 0;
     },
     checkAnswer() {
       if (this.correctAnswers[this.selectedAcronym] === undefined) {
