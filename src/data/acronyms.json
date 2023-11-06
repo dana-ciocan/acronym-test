@@ -32,12 +32,12 @@
   {
     "acronym": "EFS",
     "expansions": ["Elastic File System"],
-    "definition": "A file storage service for EC2 instances. Amazon EFS is easy to use and provides a simple interface with which you can create and configure file systems. Amazon EFS storage capacity grows and shrinks automatically as you add and remove files"
+    "definition": "A file storage service for EC2 instances. Amazon EFS is easy to use and provides a simple interface with which file systems can be created an configured. Amazon EFS storage capacity grows and shrinks automatically as files are added and removed"
   },
   {
     "acronym": "EKS",
     "expansions": ["Elastic Kubernetes Service"],
-    "definition": "A managed service that simplifies running Kubernetes on AWS without your needing to stand up or maintain your own Kubernetes control plane"
+    "definition": "A managed service that simplifies running Kubernetes on AWS without needing to stand up or maintain a Kubernetes control plane"
   },
   {
     "acronym": "SNS",
@@ -62,7 +62,7 @@
   {
     "acronym": "CDK",
     "expansions": ["Cloud Development Kit"],
-    "definition": "An open-source software development framework for defining your cloud infrastructure in code and provisioning it through AWS CloudFormation"
+    "definition": "An open-source software development framework for defining cloud infrastructure in code and provisioning it through AWS CloudFormation"
   },
   {
     "acronym": "ACL",
@@ -72,12 +72,12 @@
   {
     "acronym": "AMI",
     "expansions": ["Amazon Machine Image"],
-    "definition": "An encrypted machine image stored in Amazon Elastic Block Store (Amazon EBS) or Amazon Simple Storage Service. AMIs function similar to a template of a computer's root drive. They contain the operating system and can also include software and layers of your application, such as database servers, middleware, and web servers"
+    "definition": "An encrypted machine image stored in Amazon Elastic Block Store (Amazon EBS) or Amazon Simple Storage Service. AMIs function similar to a template of a computer's root drive. They contain the operating system and can also include software and layers of an application, such as database servers, middleware, and web servers"
   },
   {
     "acronym": "VPC",
     "expansions": ["Virtual Private Cloud"],
-    "definition": "A web service for provisioning a logically isolated section of the AWS Cloud virtual network that you define. You control your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways"
+    "definition": "A web service for provisioning a logically isolated section of the AWS Cloud virtual network"
   },
   {
     "acronym": "ASG",
@@ -87,7 +87,7 @@
   {
     "acronym": "CDN",
     "expansions": ["Content Delivery Network"],
-    "definition": "A web service that speeds up distribution of your static and dynamic web content—such as .html, .css, .js, media files, and image files—to your users by using a worldwide network of data centers. When a user requests your content, the request is routed to the data center that provides the lowest latency (time delay). If the content is already in the location with the lowest latency, the CDN delivers it immediately. If not, the CDN retrieves it from an origin that you specify (for example, a web server or an Amazon S3 bucket). With some CDNs, you can help secure your content by configuring an HTTPS connection between users and data centers, and between data centers and your origin. Amazon CloudFront is an example of a CDN."
+    "definition": "A web service that speeds up distribution of static and dynamic web content—such as .html, .css, .js, media files, and image files—to users by using a worldwide network of data centers. When a user requests content, the request is routed to the data center that provides the lowest latency (time delay). If the content is already in the location with the lowest latency, the CDN delivers it immediately. If not, the CDN retrieves it from an origin (for example, a web server or an Amazon S3 bucket). With some CDNs, an HTTPS connection can be configured between users and data centers, and between data centers and origin. Amazon CloudFront is an example of a CDN."
   },
   {
     "acronym": "CLI",
@@ -107,7 +107,7 @@
   {
     "acronym": "DMS",
     "expansions": ["Database Migration Service"],
-    "definition": "A web service that can help you migrate data to and from many widely used commercial and open-source databases"
+    "definition": "A web service that can help migrate data to and from many widely used commercial and open-source databases"
   },
   {
     "acronym": "ETL",
@@ -142,7 +142,7 @@
   {
     "acronym": "CUR",
     "expansions": ["Cost and Usage Report", "Cost Usage Report", "Cost and Usage Reports"],
-    "definition": "The AWS Cost and Usage Reports (AWS CUR) contains the most comprehensive set of cost and usage data available. You can use Cost and Usage Reports to publish your AWS billing reports to an Amazon Simple Storage Service (Amazon S3) bucket that you own. You can receive reports that break down your costs by the hour, day, or month, by product or product resource, or by tags that you define yourself. AWS updates the report in your bucket once a day in comma-separated value (CSV) format. You can view the reports using spreadsheet software such as Microsoft Excel or Apache OpenOffice Calc, or access them from an application using the Amazon S3 API"
+    "definition": "The AWS Cost and Usage Reports (AWS CUR) contains the most comprehensive set of cost and usage data available. Cost and Usage Reports can be used to publish AWS billing reports to an Amazon Simple Storage Service (Amazon S3) bucket. Reports can break down costs by the hour, day, or month, by product or product resource, or by tags. AWS updates the report once a day in comma-separated value (CSV) format"
   },
   {
     "acronym": "ROI",
@@ -152,22 +152,22 @@
   {
     "acronym": "CFM",
     "expansions": ["Cloud Financial Management"],
-    "definition": "CFM solutions help transform your business through cost transparency, control, forecasting, and optimization. These solutions can also help enable a cost-conscious culture that drives accountability across all teams and functions. Finance teams can see where costs are coming from, run operations with minimal unexpected expenses, plan for dynamic cloud usage, and save on cloud expenses while teams scale their adoptions on the cloud. Sharing this with engineering teams can provide necessary financial context for their resource selection, use, and optimization."
+    "definition": "CFM solutions help transform businesses through cost transparency, control, forecasting, and optimization. These solutions can also help enable a cost-conscious culture that drives accountability across all teams and functions. Finance teams can see where costs are coming from, run operations with minimal unexpected expenses, plan for dynamic cloud usage, and save on cloud expenses while teams scale their adoptions on the cloud. Sharing this with engineering teams can provide necessary financial context for their resource selection, use, and optimization."
   },
   {
     "acronym": "MSK",
     "expansions": ["Managed Streaming for Apache Kafka"],
-    "definition": "A fully managed service that enables you to build and run applications that use Apache Kafka to process streaming data"
+    "definition": "A fully managed service that enables the building and running of applications that use Apache Kafka to process streaming data"
   },
   {
     "acronym": "GSI",
     "expansions": ["Global Secondary Index"],
-    "definition": "In DynamoDB, you can create a global secondary index any time after creating a base table. In a global secondary index, the partition and hash keys can be different than the base table"
+    "definition": "In DynamoDB, a global secondary index can be created any time after creating a base table. In a global secondary index, the partition and hash keys can be different than the base table"
   },
   {
     "acronym": "LSI",
     "expansions": ["Local Secondary Index"],
-    "definition": "In DynamoDB, you can create a local secondary index at any time and this allows you to perform queries on items that are not the partition or sort key"
+    "definition": "In DynamoDB, a local secondary index can be created at any time and this allows queries to be performed on attributes that are not the partition or sort key"
   },
   {
     "acronym": "ACID",
@@ -182,7 +182,7 @@
   {
     "acronym": "SAML",
     "expansions": ["Security Assertion Markup Language"],
-    "definition": "SAML enables you to access multiple web applications using one set of login credentials. It works by passing authentication information in a particular format between two parties, usually an identity provider (idP) and a web application"
+    "definition": "SAML enables multiple web applications to be accessed using one set of login credentials. It works by passing authentication information in a particular format between two parties, usually an identity provider (idP) and a web application"
   },
   {
     "acronym": "IDP",
@@ -242,7 +242,7 @@
   {
     "acronym": "RAM",
     "expansions": ["Resource Access Manager"],
-    "definition": "An AWS service that allows you to share resources between accounts"
+    "definition": "An AWS service that allows the sharing of resources between accounts"
   },
   {
     "acronym": "KMS",
@@ -268,5 +268,120 @@
     "acronym": "FIFO",
     "expansions": ["First-in first-out", "First in first out"],
     "definition": "In the context of SQS, FIFO means that the messages are processed in the order in which they arrive"
+  },
+  {
+    "acronym": "RDS",
+    "expansions": ["Relational Database Service"],
+    "definition": "AWS' fully managed relational database offering"
+  },
+  {
+    "acronym": "ALB",
+    "expansions": ["Application Load Balancer"],
+    "definition": "An application load balancer automatically distributes incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones"
+  },
+  {
+    "acronym": "WORM",
+    "expansions": ["Write Once Read Many"],
+    "definition": "WORM protection is used in scenarios where it is imperative that data is not changed or deleted after it has been written; this is imposed in S3 using an object lock"
+  },
+  {
+    "acronym": "SSE",
+    "expansions": ["Server Side Encryption"],
+    "definition": "Server-side encryption is the encryption of data at its destination by the application or service that receives it. Amazon S3 encrypts data at the object level as it writes it to disks in AWS data centers and decrypts it for when it's being accessed"
+  },
+  {
+    "acronym": "ENI",
+    "expansions": ["Elastic Network Interface"],
+    "definition": "Logical networking component in a VPC; represents a virtual network card"
+  },
+  {
+    "acronym": "HPC",
+    "expansions": ["High Performance Computing"],
+    "definition": "The ability to process data and perform complex calculations at high speeds"
+  },
+  {
+    "acronym": "EFA",
+    "expansions": ["Elastic Fabric Adapter"],
+    "definition": "A network interface for Amazon EC2 instances that enables applications requiring high levels of inter-node communications to run at scale on AWS"
+  },
+  {
+    "acronym": "ML",
+    "expansions": ["Machine Learning"],
+    "definition": "A branch of Artificial Intelligence that focuses on training learning models using vast datasets"
+  },
+  {
+    "acronym": "HDFS",
+    "expansions": ["Hadoop Distributed File System"],
+    "definition": "The primary filesystem used by Hadoop applications"
+  },
+  {
+    "acronym": "DR",
+    "expansions": ["Disaster Recovery"],
+    "definition": "The process of recovering from a partial outage, usually by creating a resilient architecture that can fail over to another region"
+  },
+  {
+    "acronym": "IPOS",
+    "expansions": ["Input/Output Operations Per Second", "Input Output Operations Per Second"],
+    "definition": "A common unit of measurement for storage system performance based on drive speed and workload type"
+  },
+  {
+    "acronym": "SSD",
+    "expansions": ["Solid State Drive"],
+    "definition": "A type of disk drive that uses integrated circuits assemblies for data storage"
+  },
+  {
+    "acronym": "HDD",
+    "expansions": ["Hard Disk Drive"],
+    "definition": "A type of disk drive that uses magnetically charged platters for data storage"
+  },
+  {
+    "acronym": "SCT",
+    "expansions": ["Schema Conversion Tool"],
+    "definition": "Tool that automatically assesses and converts the source database schema and a majority of the database code objects, ready for migrating to a different database engine"
+  },
+  {
+    "acronym": "SDK",
+    "expansions": ["Software Development Kit"],
+    "definition": "Call the AWS APIs right in the application code; supports many different languages"
+  },
+  {
+    "acronym": "APN",
+    "expansions": ["Amazon Partner Network"],
+    "definition": "A global community of Amazon partners that leverages programs, expertise, and resources to build, market, and sell customer offerings"
+  },
+  {
+    "acronym": "MGN",
+    "expansions": ["Application Migration Service"],
+    "definition": "This one is wild and I don't know why it is MGN and not AMS?! Minimizes time-intensive, error-prone manual processes by automating the conversion of your source servers to run natively on AWS as part of a cloud migration"
+  },
+  {
+    "acronym": "SMS",
+    "expansions": ["Server Migration Service"],
+    "definition": "Simplifies and streamlines the process of migrating existing virtualized applications from on-prem data centres to Amazon EC2"
+  },
+  {
+    "acronym": "VM",
+    "expansions": ["Virtual Machine"],
+    "definition": "A virtual server that uses software instead of a physical computer to run programs and deploy apps"
+  },
+  {
+    "acronym": "FTP",
+    "expansions": ["File Transfer Protocol"],
+    "definition": "A way to upload and download files to servers - not secure and should not be used (use SFTP or FTPS instead); runs on port 21"
+  },
+  {
+    "acronym": "SFTP",
+    "expansions": ["Secure File Transfer Protocol"],
+    "definition": "An inherently secure way to upload and download files to servers; runs on port 22"
+  },
+  {
+    "acronym": "FTPS",
+    "expansions": ["Secure File Transfer Protocol"],
+    "definition": "A secure way to upload and download files to servers; adds a layer of encryption using SSL or TLS; uses port 989"
+  },
+  {
+    "acronym": "AS2",
+    "expansions": ["Applicability Statement 2"],
+    "definition": "A specification on how to transport structured business-to-business data securely and reliably over the Internet. Security is achieved by using digital certificates and encryption"
   }
 ]
