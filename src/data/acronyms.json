@@ -207,17 +207,17 @@
   {
     "acronym": "HSM",
     "expansions": ["Hardware Security Module"],
-    "definition": "EC2 instance level firewall"
+    "definition": "Hardened, tamper-resistant hardware devices that secure cryptographic processes by generating, protecting, and managing keys used for encrypting and decrypting data and creating digital signatures and certificates"
   },
   {
     "acronym": "FIPS",
     "expansions": ["Federal Information Processing Standards"],
-    "definition": "EC2 instance level firewall"
+    "definition": "A set of publicly announced standards that the National Institute of Standards and Technology (NIST) has developed for use in computer systems of non-military United States government agencies and contractors"
   },
   {
     "acronym": "AD",
     "expansions": ["Active Directory"],
-    "definition": "EC2 instance level firewall"
+    "definition": "A database and set of services devised by Microsoft that connect users with the network resources they need to get their work done"
   },
   {
     "acronym": "PKCS",
@@ -352,7 +352,7 @@
   {
     "acronym": "MGN",
     "expansions": ["Application Migration Service"],
-    "definition": "This one is wild and I don't know why it is MGN and not AMS?! Minimizes time-intensive, error-prone manual processes by automating the conversion of your source servers to run natively on AWS as part of a cloud migration"
+    "definition": "Not AMS, probably because that's also used for AWS Managed Services (thanks Richard!). Minimizes time-intensive, error-prone manual processes by automating the conversion of your source servers to run natively on AWS as part of a cloud migration"
   },
   {
     "acronym": "SMS",
