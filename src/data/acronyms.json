@@ -383,5 +383,30 @@
     "acronym": "AS2",
     "expansions": ["Applicability Statement 2"],
     "definition": "A specification on how to transport structured business-to-business data securely and reliably over the Internet. Security is achieved by using digital certificates and encryption"
+  },
+  {
+    "acronym": "EIP",
+    "expansions": ["Elastic IP"],
+    "definition": "A public IPv4 address, which is reachable from the internet, once created, these stay around until they are deleted again; can be assigned to various AWS resources"
+  },
+  {
+    "acronym": "POP",
+    "expansions": ["Point of Presence"],
+    "definition": "Network locations where AWS connects with other networks and internet service providers (ISPs) to improve the performance of AWS services"
+  },
+  {
+    "acronym": "SMB",
+    "expansions": ["Server Message Block"],
+    "definition": "A client-server communication protocol used for sharing access to files, printers, serial ports and other resources on a network"
+  },
+  {
+    "acronym": "NTFS",
+    "expansions": ["Server Message Block"],
+    "definition": "A process that the Windows NT operating system uses for storing, organising, and finding files on a hard disk efficiently"
+  },
+  {
+    "acronym": "AGA",
+    "expansions": ["AWS Global Accelerator"],
+    "definition": "A networking service that helps improve the availability, performance, and security of public applications through points of presence (POPs)"
   }
 ]
