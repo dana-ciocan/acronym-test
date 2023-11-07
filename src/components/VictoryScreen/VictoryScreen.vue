@@ -18,20 +18,28 @@ const props = defineProps<{
   color: white;
 }
 
-.victory-container .tada {
+.victory-container .tada,
+.victory-container .not-tada {
   margin: 2rem 0 4rem 0;
-  font-size: 4rem;
   text-align: center;
+}
+
+.victory-container .tada {
+  font-size: 4rem;
 }
 
 .victory-container {
   height: 100vh;
-  width: 60vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: rebeccapurple;
+}
+
+.victory-container button {
+  width: 80%;
 }
 
 @media screen and (min-width: 75rem) {
@@ -45,6 +53,10 @@ const props = defineProps<{
 
   .victory-container p {
     font-size: 2.25rem;
+  }
+
+  .victory-container button {
+    width: 30%;
   }
 }
 </style>
@@ -60,7 +72,7 @@ const props = defineProps<{
     <div v-if="props.numCorrectAnswers === props.totalAcronyms" class="tada">
       🎉🎉🎉
     </div>
-    <p v-if="props.numCorrectAnswers < props.totalAcronyms">
+    <p v-if="props.numCorrectAnswers < props.totalAcronyms" class="not-tada">
       😔 better luck next time!
     </p>
     <SpecialButton :inverted="true" @click="$emit('clear-game')"

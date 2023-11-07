@@ -44,7 +44,6 @@ const props = defineProps<{
   border-radius: 1rem;
   padding: 1.5rem;
   border: 1px solid rebeccapurple;
-  width: 100%;
 }
 
 .expansion-display details:hover {
@@ -67,6 +66,10 @@ const props = defineProps<{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  .expansion-display details {
     width: 100%;
   }
 }

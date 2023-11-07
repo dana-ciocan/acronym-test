@@ -118,6 +118,10 @@ body {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .expansion-display-container {
@@ -147,6 +151,7 @@ textarea {
   font-size: 3rem;
   height: 10rem;
   width: 100%;
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 60rem) {
