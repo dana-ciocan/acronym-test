@@ -103,7 +103,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
 }
 
 #app {
@@ -118,7 +118,7 @@ body {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

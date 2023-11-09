@@ -29,7 +29,7 @@ const props = defineProps<{
 }
 
 .victory-container {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   display: flex;
   flex-direction: column;
