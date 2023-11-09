@@ -408,5 +408,30 @@
     "acronym": "AGA",
     "expansions": ["AWS Global Accelerator"],
     "definition": "A networking service that helps improve the availability, performance, and security of public applications through points of presence (POPs)"
+  },
+  {
+    "acronym": "SWF",
+    "expansions": ["Simple Workflow Service"],
+    "definition": "Makes it easy to build applications that coordinate work across distributed components"
+  },
+  {
+    "acronym": "SAN",
+    "expansions": ["Storage Area Network"],
+    "definition": "A network of storage devices that can be accessed by multiple servers, providing a shared pool of storage space"
+  },
+  {
+    "acronym": "BGP",
+    "expansions": ["Border Gateway Patrol"],
+    "definition": "The protocol that enables the global routing system of the internet; used in site-to-site VPN for communication between the customer portal and the Virtual Private Gateway"
+  },
+  {
+    "acronym": "WCU",
+    "expansions": ["Write Capacity Units"],
+    "definition": "Measures the number of write requests DynamoDB can handle; each API call to write data to a table is a write request; for items up to 1KB, one WCU can perform 1 standard write request per second"
+  },
+  {
+    "acronym": "RCU",
+    "expansions": ["Read Capacity Units"],
+    "definition": "Measures the number of read requests DynamoDB can handle; each API call to read data from a table is a read request. Read requests can be strongly consistent, eventually consistent, or transactional. For items up to 4KB, one RCU can perform 1 strongly consistent read request per second"
   }
 ]
