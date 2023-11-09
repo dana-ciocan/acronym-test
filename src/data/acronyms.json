@@ -421,7 +421,7 @@
   },
   {
     "acronym": "BGP",
-    "expansions": ["Border Gateway Patrol"],
+    "expansions": ["Border Gateway Protocol"],
     "definition": "The protocol that enables the global routing system of the internet; used in site-to-site VPN for communication between the customer portal and the Virtual Private Gateway"
   },
   {
@@ -433,5 +433,10 @@
     "acronym": "RCU",
     "expansions": ["Read Capacity Units"],
     "definition": "Measures the number of read requests DynamoDB can handle; each API call to read data from a table is a read request. Read requests can be strongly consistent, eventually consistent, or transactional. For items up to 4KB, one RCU can perform 1 strongly consistent read request per second"
+  },
+  {
+    "acronym": "PITR",
+    "expansions": ["Point In Time Recovery"],
+    "definition": "DynamoDB backs up table data automatically with per-second granularity so that it can be restored to any given second in the preceding 35 days"
   }
 ]
