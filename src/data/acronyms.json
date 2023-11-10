@@ -438,5 +438,20 @@
     "acronym": "PITR",
     "expansions": ["Point In Time Recovery"],
     "definition": "DynamoDB backs up table data automatically with per-second granularity so that it can be restored to any given second in the preceding 35 days"
+  },
+  {
+    "acronym": "IaC",
+    "expansions": ["Infrastructure as Code"],
+    "definition": "Defining infrastructure as code means being able to use the same tools when building code (versioning, peer review etc.) when building infrastructure"
+  },
+  {
+    "acronym": "SCP",
+    "expansions": ["Service Control Policies"],
+    "definition": "Used in AWS Organisations to manage security and permissions available in individual AWS accounts"
+  },
+  {
+    "acronym": "CMK",
+    "expansions": ["Customer Managed Key"],
+    "definition": "One of these needs to be created before KMS can be used to manage cryptographic keys; aka AWS KMS key"
   }
 ]
